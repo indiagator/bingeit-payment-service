@@ -19,4 +19,7 @@ public class Payment {
     @Column(name = "subid", length = 50)
     private String subid;
 
+    @Column(name = "status", length = 50)
+    private String status;
+
 }

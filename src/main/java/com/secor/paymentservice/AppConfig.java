@@ -17,5 +17,14 @@ public class AppConfig {
                 .build();
     }
 
+    @Bean(name = "web-client-sub-service")
+    public WebClient webClientSubService(WebClient.Builder webClientBuilder)
+    {
+        return webClientBuilder
+                .baseUrl("http://localhost:8102/api/v1")
+                .filter(new LoggingWebClientFilter())
+                .build();
+    }
+
 
 }
